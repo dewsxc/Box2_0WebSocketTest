@@ -7,6 +7,7 @@ In default:
 1. Use protocol TLS, 'wss' and will ignore TLS verification.
 2. Clients will send binary packet.
 3. Each client will send one data every 0.5s.
+4. Each client will wait 0 ~ 1000ms before start to simulate box won't send data at same time.
 
 ## Requirement
 
