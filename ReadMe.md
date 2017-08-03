@@ -26,7 +26,7 @@ $ pip3 install .
 Binary packet will be (100 bytes):
 
 ```c
-[Timestampe 4bytes] + [Counting from 0-255] * 96
+[Timestampe 6 bytes] + [Counting from 0-255] * 94
 ```
 
 Timestamp(ms): `1501737366011` Counting at `6`
