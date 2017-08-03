@@ -19,12 +19,12 @@ PACKET_SIZE = 100
 def raw_data_json(idx):
     data = PACKET.copy()
     data["idx"] = idx
-    data["ts"] = int(time())
+    data["ts"] = int(time() * 1000)
     return json.dumps(data)
 
 def raw_data(idx):
-    t = int(time()).to_bytes(4, 'big')
-    return t + idx.to_bytes(1, 'big') * (PACKET_SIZE - 4)
+    t = int(time() * 1000).to_bytes(6, 'big')
+    return t + idx.to_bytes(1, 'big') * (PACKET_SIZE - len(t))
 
 def on_open(ws):
     # Wait for a while to simulate box will not connect at same time.
