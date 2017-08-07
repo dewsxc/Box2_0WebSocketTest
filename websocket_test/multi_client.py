@@ -69,7 +69,7 @@ def run_boy(name, url, inv, is_json, has_log):
 def main():
     cmds = parse_args()
     num = cmds.amount
-    url = "{0}://{1}:{2}".format("ws" if cmds.ws else 'wss', cmds.addr, cmds.port)
+    url = "{0}://{1}".format("ws" if cmds.ws else 'wss', cmds.url)
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=num) as executor:
         for idx in range(0, num):
