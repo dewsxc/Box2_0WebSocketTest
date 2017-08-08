@@ -23,7 +23,7 @@ def raw_data_json(idx):
     return json.dumps(data)
 
 def raw_data(idx):
-    t = int(time() * 1000).to_bytes(6, 'big')
+    t = int(time() * 1000).to_bytes(8, 'big')
     return t + idx.to_bytes(1, 'big') * (PACKET_SIZE - len(t))
 
 def on_open(ws):
