@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='wbt',
-    version='0.0.4',
+    version='0.0.5',
     description='A websocket client maker, used to test capability of channel and server.',
     license='MIT',
     author='Chou, Yi-Tang',
