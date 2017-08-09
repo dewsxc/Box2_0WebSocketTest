@@ -93,3 +93,8 @@ Send packet with json format:
 ```shell
 $ wbt 10 localhost:8765 -json
 ```
+
+Send only 5 packet and close connection:
+```shell
+$ wbt 10 localhost:8765 -a 5
+```
