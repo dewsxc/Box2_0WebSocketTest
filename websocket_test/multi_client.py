@@ -48,11 +48,12 @@ def on_open(ws):
         if ws.has_log:
             print(ws.display_name, "sent with idx ", idx)
 
-        count += 1
-        if count >= ws.amount:
-            print(ws.display_name, "stopped, reach amount:", ws.amount)
-            ws.close()
-            break
+        if ws.amount != 0:
+            count += 1
+            if count >= ws.amount:
+                print(ws.display_name, "stopped, reach amount:", ws.amount)
+                ws.close()
+                break
 
         sleep(ws.inv)
 
